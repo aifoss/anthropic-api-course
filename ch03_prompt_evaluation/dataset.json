@@ -1,0 +1,17 @@
+[
+  {
+    "task": "Parse an AWS S3 bucket name from a full S3 URI (e.g., 's3://my-bucket-name/path/to/object') and extract only the bucket name",
+    "format": "regex",
+    "solution_criteria": "Should correctly extract bucket names from S3 URIs in the format 's3://bucket-name/...' and handle bucket names with hyphens and numbers. Should not include the path after the bucket name."
+  },
+  {
+    "task": "Write a Python function that validates if a given string is a valid AWS IAM role ARN. A valid ARN should follow the pattern: arn:aws:iam::account-id:role/role-name",
+    "format": "python",
+    "solution_criteria": "Function should return True for valid IAM role ARNs and False for invalid ones. Should validate the presence of all required components (arn:aws:iam, account-id as 12 digits, role/ prefix, and role name). Should handle edge cases like extra slashes or missing components."
+  },
+  {
+    "task": "Create a JSON CloudWatch Alarm configuration for monitoring EC2 CPU utilization that triggers when average CPU exceeds 80% over a 5-minute period",
+    "format": "json",
+    "solution_criteria": "JSON should include AlarmName, MetricName (CPUUtilization), Namespace (AWS/EC2), Statistic (Average), Period (300 seconds), EvaluationPeriods, Threshold (80), ComparisonOperator (GreaterThanThreshold), and AlarmActions. Should be valid CloudWatch alarm syntax."
+  }
+]

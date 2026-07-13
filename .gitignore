@@ -1,5 +1,8 @@
 .env
 /.idea/
 /.ipynb_checkpoints/
+/ch02_accessing_claude_with_the_api/__pycache__/
 /ch02_accessing_claude_with_the_api/.ipynb_checkpoints/
+/ch03_prompt_evaluation/__pycache__/
 /ch03_prompt_evaluation/.ipynb_checkpoints/
+
