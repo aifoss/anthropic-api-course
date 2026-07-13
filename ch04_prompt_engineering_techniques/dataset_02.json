@@ -1,0 +1,15 @@
+[
+  {
+    "prompt_inputs": {
+      "content": "Recent advances in neuroeconomics have revealed that decision-making processes involve complex interactions between prefrontal cortex activity and limbic system responses, challenging traditional rational choice theory. Functional MRI studies demonstrate that when individuals face financial risk, activation patterns in the anterior insula correlate with loss aversion behaviors, while dopamine signaling in the ventral striatum predicts reward sensitivity and impulsive choices. Furthermore, behavioral economics research shows that cognitive biases such as framing effects and temporal discounting emerge from these neural mechanisms, suggesting that psychological heuristics are not merely mental shortcuts but reflect underlying neurobiological constraints on information processing and emotional regulation during economic decision-making."
+    },
+    "solution_criteria": [
+      "Extracts all major disciplinary topics (neuroeconomics, neuroscience, behavioral economics, psychology)",
+      "Identifies key neurobiological concepts (prefrontal cortex, limbic system, dopamine, ventral striatum, anterior insula)",
+      "Captures behavioral and economic phenomena (loss aversion, reward sensitivity, cognitive biases, temporal discounting, framing effects)",
+      "Returns output as a valid JSON array of strings with no duplicates"
+    ],
+    "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+    "scenario": "Testing with a multi-disciplinary passage containing overlapping topics from psychology, neuroscience, and behavioral economics to verify accurate topic extraction and handling of interdisciplinary concepts"
+  }
+]

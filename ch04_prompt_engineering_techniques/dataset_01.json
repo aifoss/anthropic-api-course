@@ -1,0 +1,18 @@
+[
+  {
+    "prompt_inputs": {
+      "height": "178 cm",
+      "weight": "62 kg",
+      "goal": "Optimize glycogen loading and digestive comfort for early morning 15km run followed by afternoon 8km easy run",
+      "restrictions": "Lactose intolerant, prefers easily digestible carbohydrates"
+    },
+    "solution_criteria": [
+      "Meal plan includes 6-8 meals/snacks distributed throughout the day with appropriate timing before and after training sessions",
+      "Pre-run meals are light, carbohydrate-dominant, and low in fat/fiber to minimize digestive discomfort",
+      "Total daily carbohydrate intake supports glycogen loading for high-mileage endurance training (approximately 8-10g per kg bodyweight)",
+      "All meals respect lactose intolerance restriction and are suitable for a lightweight endurance athlete"
+    ],
+    "task_description": "Write a compact, concise 1-day meal plan for a single athlete",
+    "scenario": "Testing with a lightweight endurance athlete (distance runner) who has early morning training and needs a meal plan that optimizes glycogen loading while managing digestive comfort during high-mileage running"
+  }
+]

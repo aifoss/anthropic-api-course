@@ -1,0 +1,20 @@
+[
+  {
+    "output": "```json\n[\n  \"neuroeconomics\",\n  \"decision-making processes\",\n  \"prefrontal cortex activity\",\n  \"limbic system responses\",\n  \"rational choice theory\",\n  \"functional MRI\",\n  \"financial risk\",\n  \"anterior insula\",\n  \"loss aversion\",\n  \"dopamine signaling\",\n  \"ventral striatum\",\n  \"reward sensitivity\",\n  \"impulsive choices\",\n  \"behavioral economics\",\n  \"cognitive biases\",\n  \"framing effects\",\n  \"temporal discounting\",\n  \"neural mechanisms\",\n  \"psychological heuristics\",\n  \"information processing\",\n  \"emotional regulation\"\n]\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "Recent advances in neuroeconomics have revealed that decision-making processes involve complex interactions between prefrontal cortex activity and limbic system responses, challenging traditional rational choice theory. Functional MRI studies demonstrate that when individuals face financial risk, activation patterns in the anterior insula correlate with loss aversion behaviors, while dopamine signaling in the ventral striatum predicts reward sensitivity and impulsive choices. Furthermore, behavioral economics research shows that cognitive biases such as framing effects and temporal discounting emerge from these neural mechanisms, suggesting that psychological heuristics are not merely mental shortcuts but reflect underlying neurobiological constraints on information processing and emotional regulation during economic decision-making."
+      },
+      "solution_criteria": [
+        "Extracts all major disciplinary topics (neuroeconomics, neuroscience, behavioral economics, psychology)",
+        "Identifies key neurobiological concepts (prefrontal cortex, limbic system, dopamine, ventral striatum, anterior insula)",
+        "Captures behavioral and economic phenomena (loss aversion, reward sensitivity, cognitive biases, temporal discounting, framing effects)",
+        "Returns output as a valid JSON array of strings with no duplicates"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with a multi-disciplinary passage containing overlapping topics from psychology, neuroscience, and behavioral economics to verify accurate topic extraction and handling of interdisciplinary concepts"
+    },
+    "score": 10,
+    "reasoning": "The solution fully satisfies all mandatory requirements: it is a valid JSON array of strings containing topics from the passage with no extra commentary. It meets all secondary criteria by identifying major disciplinary topics, key neurobiological concepts, and behavioral/economic phenomena. The extraction is thorough and accurate, with no duplicates. While some extracted items are broader conceptual phrases rather than discrete technical terms, they are all legitimate topics discussed in the passage and represent important concepts within the scholarly context. The solution demonstrates excellent comprehension of the source material."
+  }
+]
