@@ -10,6 +10,8 @@ class PromptEvaluator:
         self.chat_helper = chat_helper
         self.max_concurrent_tasks = max_concurrent_tasks
 
+
+    # Generate unique ideas for test cases
     def generate_unique_ideas(self, task_description, prompt_inputs_spec, num_cases):
         """Generate a list of unique ideas for test cases based on the task description"""
 
@@ -80,6 +82,8 @@ class PromptEvaluator:
 
         return json.loads(text)
 
+
+    # Generate a test case
     def generate_test_case(self, task_description, idea, prompt_inputs_spec={}):
         """Generate a single test case based on the task description and a specific idea"""
 
@@ -187,6 +191,8 @@ class PromptEvaluator:
 
         return test_case
 
+
+    # Generate a dataset for evaluation 
     def generate_dataset(
         self,
         task_description,
@@ -237,6 +243,8 @@ class PromptEvaluator:
 
         return dataset
 
+
+    # Grade the output
     def grade_output(self, test_case, output, extra_criteria):
         """Grade the output of a test case using the model"""
 
@@ -337,6 +345,8 @@ class PromptEvaluator:
         
         return json.loads(eval_text)
 
+
+    # Run a test case
     def run_test_case(self, test_case, run_prompt_function, extra_criteria=None):
         """Run a test case and grade the result"""
         output = run_prompt_function(test_case["prompt_inputs"], self.chat_helper)
@@ -352,6 +362,8 @@ class PromptEvaluator:
             "reasoning": reasoning,
         }
 
+
+    # Run an evaluation
     def run_evaluation(
         self,
         run_prompt_function,
@@ -405,6 +417,8 @@ class PromptEvaluator:
 
         return results
 
+
+    # Generate an evaluation report in HTML
     def generate_prompt_evaluation_report(self, evaluation_results):
         total_tests = len(evaluation_results)
         scores = [result["score"] for result in evaluation_results]
@@ -594,6 +608,8 @@ class PromptEvaluator:
     
         return html
 
+
+    # Format prompt
     def render(self, template_string, variables):
         placeholders = re.findall(r"{([^{}]+)}", template_string)
 

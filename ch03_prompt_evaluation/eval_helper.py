@@ -11,6 +11,8 @@ class EvalHelper:
     def __init__(self, client, model):
         self.chat_helper = ChatHelper(client, model)
 
+
+    # Generate a dataset for evaluation
     def generate_dataset(self):
         prompt = """
             Generate an evaluatin dataset for prompt evaluation. 
@@ -45,10 +47,14 @@ class EvalHelper:
         
         return json.loads(text)  
 
+
+    # Save the dataset to a file
     def save_dataset(self, dataset):
         with open("dataset.json", "w") as f:
             json.dump(dataset, f, indent=2)
 
+
+    # Run prompt and get response        
     def run_prompt(self, test_case):
         """Merges the prompt and test case input, then returns the result"""
         
@@ -70,6 +76,8 @@ class EvalHelper:
         
         return output
 
+
+    # Run a test case
     def run_test_case(self, test_case):
         """Calls run_prompt, then grades the result"""
 
@@ -90,7 +98,9 @@ class EvalHelper:
             "score": score,
             "reasoning": reasoning
         }
-    
+
+
+    # Run an evaluation
     def run_eval(self, dataset):
         """Load the dataset, then calls run_test_case with each case"""
 
@@ -105,6 +115,8 @@ class EvalHelper:
             
         return results
 
+
+    # Grade the output using a model
     def grade_by_model(self, test_case, output):
         eval_prompt = f"""
         You aren an expert AWS code reviewer. Your task is to evaluate the following AI-generated solution.
@@ -151,6 +163,8 @@ class EvalHelper:
 
         return json.loads(eval_text)
 
+
+    # Validate JSON output format
     def validate_json(self, text):
         try:
             json.loads(text.strip())
@@ -158,6 +172,8 @@ class EvalHelper:
         except json.JSONDecodeError:
             return 0
 
+
+    # Validate Python output format
     def validate_python(self, text):
         try:
             ast.parse(text.strip())
@@ -165,6 +181,8 @@ class EvalHelper:
         except SyntaxError:
             return 0
 
+
+    # Validate Regex output format
     def validate_regex(self, text):
         try:
             re.compile(text.strip())
@@ -172,6 +190,8 @@ class EvalHelper:
         except re.error:
             return 0
 
+
+    # Grade output syntax
     def grade_syntax(self, test_case, response):
         format = test_case["format"]
         if format == "json":
