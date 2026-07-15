@@ -1,3 +1,5 @@
+# 2026-07-12 sofia
+
 class ChatHelper:
 
     def __init__(self, client, model):

@@ -1,3 +1,5 @@
+# 2026-07-14 sofia
+
 from anthropic.types import Message
 
 class ChatHelper:

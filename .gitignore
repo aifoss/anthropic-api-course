@@ -14,3 +14,9 @@
 /ch06_retrieval_augmented_generation/.ipynb_checkpoints/
 /ch07_features_of_claude/__pycache__/
 /ch07_features_of_claude/.ipynb_checkpoints/
+/ch08_model_context_protocol/__pycache__/
+/ch08_model_context_protocol/.ipynb_checkpoints/
+/ch08_model_context_protocol/cli_project/.env/
+/ch08_model_context_protocol/cli_project/.venv/
+/ch08_model_context_protocol/cli_project/.ipynb_checkpoints/
+/ch08_model_context_protocol/cli_project/uv.lock

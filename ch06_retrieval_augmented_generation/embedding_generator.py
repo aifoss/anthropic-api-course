@@ -1,3 +1,5 @@
+# 2026-07-13 sofia
+
 class EmbeddingGenerator:
 
     def __init__(self, client, model):
