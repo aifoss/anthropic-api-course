@@ -1,0 +1,56 @@
+from anthropic.types import Message
+
+class ChatHelper:
+
+    def __init__(self, client, model):
+        self.client = client
+        self.model = model
+
+
+    # Add user message (containing multiple blocks) to messages
+    def add_user_message(self, messages, message):        
+        user_message = {
+            "role": "user", 
+            "content": message.content if isinstance(message, Message) else message
+        }
+        messages.append(user_message)
+
+
+    # Add assistant message (containing multiple blocks) to messages
+    def add_assistant_message(self, messages, message):
+        assistant_message = {
+            "role": "assistant", 
+            "content": message.content if isinstance(message, Message) else message
+        }
+        messages.append(assistant_message)
+
+
+    # Chat by sending messages (including tool use) to Claude to get response
+    def chat(self, messages, system=None, temperature=1.0, stop_sequences=[], tools=None, tool_choice=None):
+        params = {
+            "model": self.model,
+            "max_tokens": 1000,
+            "messages": messages,
+            "temperature": temperature,
+            "stop_sequences": stop_sequences
+        }
+
+        if tool_choice:
+            params["tool_choice"] = tool_choice
+
+        if tools:
+            params["tools"] = tools
+
+        if system:
+            params["system"] = system
+        
+        message = self.client.messages.create(**params)
+
+        return message
+
+
+    # Extract text from message
+    def text_from_message(self, message):
+        return "\n".join(
+            [block.text for block in message.content if block.type == "text"]
+        )
