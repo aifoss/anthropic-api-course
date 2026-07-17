@@ -1,2 +1,2 @@
 # anthropic-api-course
-Code for LinkedIn Course: Building with the Claude API by Anthropic (July 2026) 
+Code for Anthropic/LinkedIn Course: Building with the Claude API (July 2026) 

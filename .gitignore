@@ -20,3 +20,15 @@
 /ch08_model_context_protocol/cli_project/.venv/
 /ch08_model_context_protocol/cli_project/.ipynb_checkpoints/
 /ch08_model_context_protocol/cli_project/uv.lock
+/ch09_anthropic_apps/__pycache__
+/ch09_anthropic_apps/.ipynb_checkpoints/
+/ch09_anthropic_apps/app_starter/__pycache__
+/ch09_anthropic_apps/app_starter/.ipynb_checkpoints/
+/ch09_anthropic_apps/app_starter/.pytest_cache/
+/ch09_anthropic_apps/app_starter/app.egg-info/
+/ch09_anthropic_apps/app_starter/.venv/
+/ch09_anthropic_apps/app_starter/tests/__pycache__
+/ch09_anthropic_apps/app_starter/tests/.ipynb_checkpoints/
+/ch09_anthropic_apps/app_starter/tools/__pycache__
+/ch09_anthropic_apps/app_starter/tools/.ipynb_checkpoints/
+/ch09_anthropic_apps/app_starter/uv.lock
